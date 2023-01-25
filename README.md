@@ -5,6 +5,7 @@
 
 ## Install 
 1. clone project 
+2. set .env
 2. run command 
 ``
 composer install
