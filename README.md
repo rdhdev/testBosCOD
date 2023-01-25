@@ -5,15 +5,19 @@
 
 ## Install 
 1. clone project 
-2. set .env
-2. run command 
+2. rename .env.example to .env
+3. set .env
+`` DB_DATABASE=
+DB_USERNAME=
+DB_PASSWORD= ``
+5. run command 
 ``
 composer install
 ``
-3. run migration
+4. run migration
 `` php artisan migrate
 ``
-4. run seeder
+5. run seeder
 `` php artisan db:seed ``
 
 ## Api Documentation
