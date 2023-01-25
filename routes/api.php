@@ -16,8 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('login', [AuthController::class, 'login']);
-Route::post('update-token', [AuthController::class, 'updateToken']);
+Route::group(['prefix' => 'auth'], function() {
+    Route::post('/login', [AuthController::class, 'login']);
+    Route::post('/update-token', [AuthController::class, 'updateToken']);
+});
 Route::group(['middleware' => 'jwt.verify'], function() {
     Route::post('/transfer', [TransferController::class, 'create']);
 });
