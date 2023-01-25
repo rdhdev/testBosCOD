@@ -28,6 +28,18 @@ class RekeningAdminSeeder extends Seeder
                 'nama'          => 'Yuli',
                 'nomor_rekening'=> '022348388829'
             ],
+            [
+                'user_id'       => 1,
+                'bank_id'       => 3,
+                'nama'          => 'Yuli',
+                'nomor_rekening'=> '0249002342'
+            ],
+            [
+                'user_id'       => 1,
+                'bank_id'       => 4,
+                'nama'          => 'Yuli',
+                'nomor_rekening'=> '90230492'
+            ],
         ]);
     }
 }

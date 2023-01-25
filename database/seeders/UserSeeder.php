@@ -22,14 +22,6 @@ class UserSeeder extends Seeder
                     'username'    => 'admin1@getnada.com',
                     'password' => Hash::make('Admin123@')
                 ],
-                [
-                    'username'    => 'admin2@getnada.com',
-                    'password' => Hash::make('Admin123@')
-                ],
-                [
-                    'username'    => 'admin3@getnada.com',
-                    'password' => Hash::make('Admin123@')
-                ],
             ]
         );
     }
