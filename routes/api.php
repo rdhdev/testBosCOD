@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\TransferController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('login', [AuthController::class, 'login']);
+Route::post('update-token', [AuthController::class, 'updateToken']);
+Route::group(['middleware' => 'jwt.verify'], function() {
+    Route::post('/transfer', [TransferController::class, 'create']);
+});

@@ -2,6 +2,7 @@
 
 namespace App\Service;
 
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 
 class AuthService
@@ -23,7 +24,14 @@ class AuthService
 
     public function refresh() 
     {
-        return $this->createNewToken(auth()->refresh());
+        try {
+            return $this->createNewToken(auth()->refresh());
+        } catch (\Exception $e) {
+            return response()->json([
+                'code'    => 500,
+                'message' => $e->getMessage(),
+            ], 500);
+        }
     }
 
     protected function createNewToken($token)

@@ -19,15 +19,15 @@ class UserSeeder extends Seeder
         User::insert(
             [
                 [
-                    'email'    => 'admin1@getnada.com',
+                    'username'    => 'admin1@getnada.com',
                     'password' => Hash::make('Admin123@')
                 ],
                 [
-                    'email'    => 'admin2@getnada.com',
+                    'username'    => 'admin2@getnada.com',
                     'password' => Hash::make('Admin123@')
                 ],
                 [
-                    'email'    => 'admin3@getnada.com',
+                    'username'    => 'admin3@getnada.com',
                     'password' => Hash::make('Admin123@')
                 ],
             ]

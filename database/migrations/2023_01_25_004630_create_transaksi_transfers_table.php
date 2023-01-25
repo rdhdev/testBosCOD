@@ -14,6 +14,7 @@ class CreateTransaksiTransfersTable extends Migration
     public function up()
     {
         Schema::create('transaksi_transfers', function (Blueprint $table) {
+            $table->id();
             $table->string('id', 100)->unique();
             $table->foreignId('bank_pengirim');
             $table->foreignId('bank_penerima');
